@@ -44,14 +44,15 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 
 ### Detail Page Images
 
-- **Login and see onboarding pages**
+
 <img src = "https://user-images.githubusercontent.com/70003845/229250008-858daa39-2851-49c2-873a-5cf0fcf440d4.png" width = "50%">
 
 ![onboard](https://user-images.githubusercontent.com/70003845/229249958-1dca634a-7bbd-4ca8-959e-e7f8874dbd31.png)
 
 <br/>
+- Login and see onboarding pages
 
-  Our Good To Go app allows users to sign up and log in through Google login. Our Good To Go app uses an onboarding page to introduce first-time users to the app.
+  Our Good To Go app allows users to sign up and log in through Google login and our app uses an onboarding page to introduce first-time users to the app.
 
 <br/>
 
@@ -59,7 +60,7 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 
 #### Set user location
 
-After going through the onboarding page, the user is prompted to enter their location. The user can navigate to their current location via GPS, search for a location via the search bar, or move a pin on the map to set a precise address. After the location is set, a map appears showing the user's current location and restaurants near the user. You can click the icons on the map to see the names of the restaurants. Pull up the panel at the bottom of the screen to see a list of restaurants near the user. Restaurants are organized by category.
+After going through the onboarding page, the user has to enter their location. The user can navigate to their current location via GPS, search for a location via the search bar, or move a pin on the map to set a precise address. After the location is set, a map appears showing the user's current location and restaurants near the user. You can click the restaurant icons on the map to see the names of the restaurants. Pull up the panel at the bottom of the screen to see a list of restaurants near the user. Users can also organize the restaurants by tapping on the food categories located at the top of the panel.
 
 <br/>
 
