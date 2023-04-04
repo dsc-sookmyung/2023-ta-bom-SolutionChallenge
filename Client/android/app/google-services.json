@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "130932636420",
+    "project_id": "good-to-go-3c667",
+    "storage_bucket": "good-to-go-3c667.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:130932636420:android:5bf33cdd2ce859428aee51",
+        "android_client_info": {
+          "package_name": "com.example.good_to_go"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "130932636420-snfe49l6fdu6nj050d0m8pkm5r8cmam1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.good_to_go",
+            "certificate_hash": "1b172e494f9030922e411d2832aeb963254cc307"
+          }
+        },
+        {
+          "client_id": "130932636420-j0v9enjvgi8n6if4c3hrcm0gg64lmg9e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDd_EbZrpLlwyczzmWK69lIlVOGxQSAHdQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "130932636420-j0v9enjvgi8n6if4c3hrcm0gg64lmg9e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
