@@ -35,12 +35,12 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 ## 👍Feature
 
 ### Feature Overview
-1. [Google login](#login-and-onboarding-pages)
-2. [Set user location]
-3. [Show Resturants near by user]
-4. [Order food for packing]
-5. [Write review]
-6. [See the recap](#recap-page)
+1. Google login
+2. Set user location
+3. Show Resturants near by user
+4. Order food for packing
+5. Write review
+6. See the recap
 
 ### Detail Page Images
 
@@ -106,14 +106,14 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 <br/>
 
 ## 👍Execution Method
+Here's how you can set up a testing environment.<br/>
+1. Download the apk file [here](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/releases/tag/v1.0.0).  <br/>
+2. Run the apk file on your phone or the emulator.<br/>
+3. To ensure the best experience while testing our app, we recommend testing it in a Pixel 6 or higher environment. <br/>
+4. **!important!**Currently, Good To Go's restaurant list consists of restaurants near our team's university, Sookmyung Women's University, so you can try Good To Go by entering `sookmyung women's univ Gwahaggwan` or `GXV8+VH2 Seoul` in the search bar when setting your location.<br/>
+![image](https://user-images.githubusercontent.com/70003845/229538772-3c8e50b0-936e-4022-a833-94696c13bff3.png)<br/>
+**If you encounter any issues while setting up or running the project, please don't hesitate to contact us.** <br/>
 
-Download the apk file [here](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/releases/tag/v1.0.0).  
-Run the apk file on your phone.
-
-**Check the following before running Good To Go.** 
-<br/>
-Currently, Good To Go's restaurant list consists of restaurants near our team's university, Sookmyung Women's University, so you can try Good To Go by entering `sookmyung women's univ Gwahaggwan` or `GXV8+VH2 Seoul` in the search bar when setting your location.<br/>
-![image](https://user-images.githubusercontent.com/70003845/229538772-3c8e50b0-936e-4022-a833-94696c13bff3.png)
 
 <br/>
 
