@@ -88,7 +88,7 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 ![review](https://user-images.githubusercontent.com/70003845/229252041-04333560-8657-4610-b63e-de73d6a6ae68.png)
 
 #### Write and read reviews
-  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO. Users can write reviews for past orders.
+  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO'. Users can write reviews for past orders.
 
  
 
