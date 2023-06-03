@@ -5,6 +5,7 @@ import {multer} from '../middleware/image.js';
 const router = Router();
 
 router.post('', multer.single('img'), reviewController.postReview);
+router.post('/emoji/:id', reviewController.postEmoji);
 router.get('/restrt/:id', reviewController.getReviewListByRestrtIdWithPage); //?page=2&size=3
 router.get('/user/:id', reviewController.getReviewListByUserIdWithPage); //?page=2&size=3
 router.delete('/:id', reviewController.deleteReview);

@@ -1,7 +1,7 @@
 import { fbDB } from '../config/firebase.js';
 import {uploadFile} from '../middleware/image.js';
 import {v4 as uuidv4} from 'uuid';
-import {changeState, makeSchedule} from '../middleware/changeState.js';
+import {changeState, makeSchedule, makeMonthRevenueDoc, makeDayRevenueDoc} from '../middleware/changeState.js';
 import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 
 const postRestrt = async (file, data) => {
@@ -12,16 +12,18 @@ const postRestrt = async (file, data) => {
         }else{
             data.img = null;
         }
+        //자료형 변환
         data.category = Number(data.category);
         data.star_rating = Number(data.star_rating);
         data.review_count = Number(data.review_count);
         data.order_number = Number(data.order_number);
         data.opening_hours = JSON.parse(data.opening_hours);
         data.geo_point = JSON.parse(data.geo_point);
-
         const res = await fbDB.collection('restaurants').add(data);
         changeState(res.id);
         makeSchedule(res.id);
+        makeMonthRevenueDoc(res.id);
+        makeDayRevenueDoc(res.id);
         const restId = {id: res.id};
         return restId;
     }catch (error){
@@ -39,14 +41,19 @@ const postMenu = async (files, data) => { //❗데이터 객체 개수와 이미
             }else{
                 data[i].img = null;
             }
-            const res = await fbDB.collection('menus').add(data[i]);
-            menuIdList.push({id: res.id});
-
+            const menuData = {
+                name: data[i].name,
+                price: data[i].price,
+                img: data[i].img,
+                detail_category: data[i].detail_category,
+                container: Number(data[i].container),
+                description: data[i].description,
+                disabled: data[i].disabled
+            }
             const restrtId = data[i].restrt_id;
-            const restrtRef = fbDB.collection('restaurants').doc(restrtId);
-            const restrtRes = await restrtRef.update({
-                menu_list: FieldValue.arrayUnion(res.id)
-            });
+            const menuCollection = fbDB.collection('restaurants').doc(restrtId).collection('menus');
+            const res = await menuCollection.add(menuData);
+            menuIdList.push({id: res.id});
         };
         return menuIdList;
     }catch (error){
@@ -55,24 +62,20 @@ const postMenu = async (files, data) => { //❗데이터 객체 개수와 이미
     }
 };
 
-const postOption = async (id, data) => {
+const postOption = async (restrtId, menuId, data) => {
     try{
         const options = [];
         for (let doc of data){
-            for (let contdoc of doc.content){
+            for (let contdoc of doc.contents){
                 contdoc.id = uuidv4();
             }
-            const resOption = await fbDB.collection('menu-options').add(doc);
-            const optRef = fbDB.collection('menu-options').doc(resOption.id);
-            const optSnapshot = await optRef.get();
-            let optData = optSnapshot.data();
+            console.log(restrtId);
+            console.log(menuId);
+            const optionCollection = fbDB.collection('restaurants').doc(restrtId).collection('menus').doc(menuId).collection('menu-options');
+            const resOption = await optionCollection.add(doc);
+            const optData = doc;
             optData.id = resOption.id;
             options.push(optData);
-            //메뉴 디비에 해당 메뉴의 옵션id를 리스트에 추가
-            const menuRef = fbDB.collection('menus').doc(id);
-            const resMenu = await menuRef.update({
-                option_id: FieldValue.arrayUnion(resOption.id)
-            });
         };
         return options;//optionIdList;
     }catch (error){
@@ -81,35 +84,34 @@ const postOption = async (id, data) => {
     }
 };
 
-
 const getRestrt = async (id) => {
     try{
         const restRef = fbDB.collection('restaurants').doc(id);
-        const restrtSnapshot = await restRef.get();
-        if (!restrtSnapshot.exists){
+        const restrtDoc = await restRef.get();
+        if (!restrtDoc.exists){
             throw {message: "There is no such restrt corresponding to the provided identifier."};
         }else{
-            let restrtData = restrtSnapshot.data();
+            const restrtData = restrtDoc.data();
             restrtData.id = id;
-            const menuIdList = restrtData.menu_list;
-            const menuList = [];
-            const categoryList=[];
-            for (let menuId of menuIdList){
-                const menuRef = fbDB.collection('menus').doc(menuId);
-                const menuSnapshot = await menuRef.get();
-                const menuData = menuSnapshot.data();
-                menuData.id = menuSnapshot.id;
-                if (categoryList.indexOf(menuData.detail_category) > -1){
-                    const index = categoryList.indexOf(menuData.detail_category);
-                    menuList[index].menuList.push(menuData);
+
+            const menusRef = fbDB.collection('restaurants').doc(id).collection('menus');
+            const menusSnapshot = await menusRef.get();
+            restrtData.menu_list = [];
+            const categoryList = [];
+            menusSnapshot.forEach(doc => {
+                const menuData = doc.data();
+                menuData.restrt_id = id;
+                menuData.id = doc.id;
+                const index = categoryList.indexOf(doc.data().detail_category);
+                if(index > -1){
+                    restrtData.menu_list[index].menuList.push(menuData);
                 }else{
-                    categoryList.push(menuData.detail_category);
-                    let x = {detail_category: menuData.detail_category, menuList:[menuData]};
-                    menuList.push(x);
+                    categoryList.push(doc.data().detail_category);
+                    const x = {detail_category: doc.data().detail_category, menuList:[menuData]};
+                    restrtData.menu_list.push(x);
                 }
-            }
-            const sortedMenuList = menuList.sort((a, b) => a.detail_category < b.detail_category ? -1 : 1);
-            restrtData.menu_list = sortedMenuList;
+            });
+            restrtData.menu_list.sort((a, b) => a.detail_category < b.detail_category ? -1 : 1);
             return restrtData;
         }
     }catch (error){
@@ -165,17 +167,15 @@ const getRestrtListWithCategory = async (c) => { //🔺 위치에 따라 리스�
 
 const getMenuList = async (id) => {
     try{
-        const restRef = fbDB.collection('restaurants').doc(id);
-        const snapshot = await restRef.get();
-        const menuIdList = snapshot.data().menu_list;
+        const menusCollection = fbDB.collection('restaurants').doc(id).collection('menus');
+        const menuSnapshot = await menusCollection.get();
         let menuList = [];
-        for (let menuId of menuIdList){ //async/await은 forEach문 안에서 사용할 수 없다.
-            const menuRef = fbDB.collection('menus').doc(menuId);
-            const menusnapshot = await menuRef.get();
-            const menuData = menusnapshot.data();
-            menuData.menuId = menuId
+        menuSnapshot.forEach(doc => {
+            const menuData = doc.data();
+            menuData.id = doc.id;
+            menuData.restrtId = id;
             menuList.push(menuData);
-        }
+        });
         if (menuList == 0){
             throw {message: "empty error"};
         }else{
@@ -187,22 +187,21 @@ const getMenuList = async (id) => {
     }
 };
 
-const getMenuWithOptions = async (id) =>{
+const getMenuWithOptions = async (restrtId, menuId) =>{
     try{
-        const menuRef = fbDB.collection('menus').doc(id);
-        const menusnapshot = await menuRef.get();
-        const optionIdList = menusnapshot.data().option_id;
-        const menuData = menusnapshot.data();
-        menuData.id = menusnapshot.id;
-        let optionList = [];
+        const menuRef = fbDB.collection('restaurants').doc(restrtId).collection('menus').doc(menuId);
+        const menuSnapshot = await menuRef.get();
+        const menuData = menuSnapshot.data();
+        menuData.id = menuSnapshot.id;
         //메뉴 아이디
-        for (let optionId of optionIdList){ //async/await은 forEach문 안에서 사용할 수 없다.
-            const optionRef = fbDB.collection('menu-options').doc(optionId);
-            const optionsnapshot = await optionRef.get();
-            const optionData = optionsnapshot.data();
-            optionData.id = optionId;
+        const optionList = [];
+        const optionRef = menuRef.collection('menu-options');
+        const optionSnapshot = await optionRef.get();
+        optionSnapshot.forEach(doc => {
+            const optionData = doc.data();
+            optionData.id = doc.id;
             optionList.push(optionData);
-        };
+        });
         const menuWithOption = {menu: menuData, option: optionList};
         return menuWithOption;
     }catch (error){
@@ -225,10 +224,9 @@ const deleteRestrt = async (id) => {
 
 const deleteMenu = async (restrtId, menuId) => {
     try{
-        const restrtRef = fbDB.collection('restaurants').doc(restrtId);
-        const res = await restrtRef.update({
-            menu_list: FieldValue.arrayRemove(menuId)
-        });
+        const menusRef = fbDB.collection('restaurants').doc(restrtId).collection('menus');
+        const deleteMenu = await menusRef.doc(menuId).delete();
+        //하위 컬렉션인 옵션 삭제
         const data = {restrtId: restrtId, menuId: menuId};
         return data;
     }catch (error){
@@ -237,12 +235,10 @@ const deleteMenu = async (restrtId, menuId) => {
     }
 };
 
-const deleteOption = async (menuId, optionId) => {
+const deleteOption = async (restrtId, menuId, optionId) => {
     try{
-        const menuRef = fbDB.collection('menus').doc(menuId);
-        const res = await menuRef.update({
-            option_id: FieldValue.arrayRemove(optionId)
-        });
+        const optionsRef = fbDB.collection('restaurants').doc(restrtId).collection('menus').doc(menuId).collection('menu-options');
+        const deleteOption = await optionsRef.doc(optionId).delete();
         const data = {menuId: menuId, optionId: optionId};
         return data;
     }catch (error){
@@ -299,6 +295,65 @@ const searchRestrt = async (data) => { //🔺 위치에 따라 리스트 선정 
     }
 };
 
+const getRevenue = async (id) => {
+    try{
+        const now = new Date();
+        const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000); // 현재 시간을 utc로 변환한 밀리세컨드값
+        const koreaTimeDiff = 9 * 60 * 60 * 1000; // 한국 시간은 UTC보다 9시간 빠름
+        const koreaNow = new Date(utcNow + koreaTimeDiff); // utc로 변환된 값을 한국 시간으로 변환시키기 위해 9시간(밀리세컨드)를 더함
+        const nowYear = koreaNow.getFullYear(); //요일 일월화수목금토
+        const nowMonth = ("0" + (1 + koreaNow.getMonth())).slice(-2);
+        const nowDay = koreaNow.getDate() + "";
+        const revenueId = nowYear + nowMonth;
+        //오늘 매출, 이번달 매출
+        const revenueRef = fbDB.collection('restaurants').doc(id).collection('revenues').doc(revenueId);
+        const revenueSnapshot = await revenueRef.get();
+        const todayRevenue = revenueSnapshot.data()[nowDay];
+        const monthRevenue = revenueSnapshot.data().total_revenue;
+        //최근 6달의 매출
+        const lastSixRevenueList = [];
+        const idList = [];
+        const Monthnum = Number(nowMonth);
+        for (let i=5 ; i>=0 ; i--){
+            if(Monthnum - i > 0){
+                const month = ("0"+(Monthnum - i)).slice(-2);
+                const id = nowYear + month;
+                idList.push(id);
+            }else{
+                const month = ("0"+(Monthnum - i + 12)).slice(-2);
+                const year = nowYear - 1;
+                const id = year + month;
+                idList.push(id);
+            }
+        }
+        for (let revenueid of idList){
+            const ref = fbDB.collection('restaurants').doc(id).collection('revenues').doc(revenueid);
+            const doc = await ref.get();
+            let data;
+            if (doc.data() == undefined ){
+                data = {
+                    id: revenueid,
+                    total_revenue: 0
+                };
+            }else{
+                data = {
+                    id: revenueid,
+                    total_revenue: doc.data().total_revenue
+                };
+            }
+            lastSixRevenueList.push(data);
+        }
+        const resData = {
+            todayRevenue: todayRevenue,
+            monthRevenue: monthRevenue,
+            lastSixRevenueList: lastSixRevenueList
+        }
+        return resData;
+    }catch (error){
+        console.log(error);
+        throw error;
+    }
+};
 
 export default {
     postRestrt,
@@ -313,4 +368,5 @@ export default {
     deleteOption,
     searchRestrt,
     getRestrtListWithCategory,
+    getRevenue,
 };

@@ -133,5 +133,5 @@ const getOrderListByUserIdWithPage = async (req, res) => {
 export default {
     getOrderById, 
     postOrder,
-    getOrderListByUserIdWithPage
+    getOrderListByUserIdWithPage, 
 };

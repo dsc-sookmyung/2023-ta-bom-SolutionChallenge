@@ -28,6 +28,32 @@ const postReview = async (req, res) => {
 };
 
 /**
+ *  @route POST /review/emoji
+ *  @desc post emoji data
+ *  @access Private
+ */
+const postEmoji = async (req, res) => {
+    const { id } = req.params;
+    const data = req.body;
+    try {
+        const postEmoji = await reviewService.postEmoji(id, data);
+        return res.status(200).json({
+            status: 200,
+            success: true,
+            message: "리뷰 이모지 생성 성공",
+            data: postEmoji,
+        });
+    }catch (error){
+        console.log(error);
+        res.status(400).json({
+        status: 400,
+        success: false,
+        message: error.message,
+    });
+    }
+};
+
+/**
  *  @route GET /review/restrt/:id
  *  @desc get restaurant reviews data
  *  @access Private
@@ -148,6 +174,7 @@ const deleteReview = async (req, res) => {
 
 export default {
     postReview,
+    postEmoji,
     getReviewListByRestrtIdWithPage,
     getReviewListByUserIdWithPage,
     deleteReview,

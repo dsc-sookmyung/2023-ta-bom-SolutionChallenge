@@ -4,94 +4,10 @@ import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 const getOrderById = async (id) => {
     try{
         const orderRef = fbDB.collection('orders').doc(id);
-        const ordersnapshot = await orderRef.get();
-        const orderMenuIdList = ordersnapshot.data().menu_id_list; //주문메뉴 id 리스트
-        let orderMenuList = [];
-        for (let orderMenuId of orderMenuIdList){ //async/await은 forEach문 안에서 사용할 수 없다.
-            const orderMenuRef = fbDB.collection('order-menus').doc(orderMenuId);
-            const orderMenusnapshot = await orderMenuRef.get();
-            const menuId = orderMenusnapshot.data().menu_id; //메뉴 id
-            const menuRef = fbDB.collection('menus').doc(menuId);
-            const menusnapshot = await menuRef.get(); //메뉴 이름 확인용
-            let optionList = [];
-            for (let op of orderMenusnapshot.data().options){ //주문한 메뉴의 옵션 리스트
-                const optionRef = fbDB.collection('menu-options').doc(op.ops_id); //옵션 id
-                const optionsnapshot = await optionRef.get();
-                let contentList = [];
-                for (let cid of op.content_id){ //["1", "2"]
-                    for (let i of optionsnapshot.data().content){
-                        if (i.id == cid){
-                            contentList.push({id: cid, name: i.name, price: i.price, container: i.container});
-                        }
-                    }
-                }
-                optionList.push({id: op.ops_id, option_name: optionsnapshot.data().option_name, content: contentList}) //옵션 아이디, 옵션 이름, 콘텐츠 id
-            };
-            orderMenuList.push({orderMenuId: orderMenuId, name: menusnapshot.data().name, amount: orderMenusnapshot.data().amount, price: menusnapshot.data().price,
-                            menu_option: optionList, container: menusnapshot.data().container });
-        };
-        const restrtRef = fbDB.collection('restaurants').doc(ordersnapshot.data().restrt_id); //옵션 id
-        const restrtsnapshot = await restrtRef.get();
-        const order = {id:ordersnapshot.id, user_id: ordersnapshot.data().user_id, state: ordersnapshot.data().state, restrt_id: ordersnapshot.data().restrt_id, orderMenuList: orderMenuList, 
-                        total_price: ordersnapshot.data().total_price, requirements: ordersnapshot.data().requirements, payment_method: ordersnapshot.data().payment_method, 
-                        order_number: ordersnapshot.data().order_number, created_at: ordersnapshot.data().created_at, 
-                        restrt_name: restrtsnapshot.data().name, restrt_img: restrtsnapshot.data().img, check_review: ordersnapshot.data().check_review
-                    };
-        return order;
-    }catch (error){
-        console.log(error);
-        throw error;
-    }
-};
-
-//for test
-const changeOrderState = async (id) => {
-    try{
-        const orderRef = fbDB.collection('orders').doc(id);
-        setTimeout(() => orderRef.update({state: "accepted"}), 5000);
-        setTimeout(() => orderRef.update({state: "cooked"}), 10000);
-        setTimeout(() => {
-            orderRef.update({state: "packed"});
-            orderRef.update({packed_time: FieldValue.serverTimestamp()});
-        }, 15000);
-
-    }catch (error){
-        console.log(error);
-        throw error;
-    }
-
-}
-
-const postOrder = async (data) => {   
-    try{
-        let menu_list = [];
-        for (let menu of data.orderMenuList){
-            const res = await fbDB.collection('order-menus').add(menu);
-            menu_list.push(res.id);
-        }
-        const restrtRef = fbDB.collection('restaurants').doc(data.restrt_id);
-        const updateOrdernum = await restrtRef.update({order_number:FieldValue.increment(1)});
-        const refsnapshot = await restrtRef.get();
-        const order = {
-            restrt_id : data.restrt_id,
-            user_id : data.user_id, 
-            requirements : data.requirements, 
-            payment_method : data.payment_method, 
-            total_price : Number(data.total_price),
-            created_at: FieldValue.serverTimestamp(),
-            menu_id_list: menu_list,
-            order_number: Number(refsnapshot.data().order_number),
-            state: "checking",
-            packed_time: null,
-            check_review: false,
-        };
-        const res = await fbDB.collection('orders').add(order);
-        const ref = fbDB.collection('orders').doc(res.id);
-        const snapshot = await ref.get();
-        const resData = snapshot.data();
-        resData.id = res.id;
-        //for test
-        changeOrderState(res.id);
+        const orderDoc = await orderRef.get();
+        const resData = orderDoc.data();
+        console.log(resData);
+        resData.id = id;
         return resData;
     }catch (error){
         console.log(error);
@@ -99,7 +15,54 @@ const postOrder = async (data) => {
     }
 };
 
-const getOrderListByUserId = async (id) => {
+const postOrder = async (data) => {   
+    try{
+        //식당 DB의 order_num 갱신
+        const restrtRef = fbDB.collection('restaurants').doc(data.restrt_id);
+        const updateOrdernum = await restrtRef.update({order_number:FieldValue.increment(1)});
+        //식당DB revenues 컬렉션 문서 갱신
+        const now = new Date();
+        const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000); // 현재 시간을 utc로 변환한 밀리세컨드값
+        const koreaTimeDiff = 9 * 60 * 60 * 1000; // 한국 시간은 UTC보다 9시간 빠름
+        const koreaNow = new Date(utcNow + koreaTimeDiff); // utc로 변환된 값을 한국 시간으로 변환시키기 위해 9시간(밀리세컨드)를 더함
+        const nowYear = koreaNow.getFullYear(); //요일 일월화수목금토
+        const nowMonth = ("0" + (1 + koreaNow.getMonth())).slice(-2);
+        const nowDay = koreaNow.getDate() + "";
+        const revenueId = nowYear + nowMonth;
+        const revenueRef = restrtRef.collection('revenues').doc(revenueId);
+        const updateRevenue = await revenueRef.update({
+            total_revenue:FieldValue.increment(Number(data.total_price)), //달 매출 갱신
+            [nowDay]: FieldValue.increment(Number(data.total_price)), //하루 매출 갱신
+        });
+        //order 정보 생성
+        const refsnapshot = await restrtRef.get();
+        const orderData = {
+            restrt_id : data.restrt_id,
+            user_id : data.user_id, 
+            requirements : data.requirements, 
+            payment_method : data.payment_method, 
+            total_price : Number(data.total_price),
+            created_at: FieldValue.serverTimestamp(),
+            order_number: Number(refsnapshot.data().order_number),
+            state: "checking",
+            packed_time: null,
+            check_review: false,
+            preview_text: data.preview_text,
+            orderMenuList: data.orderMenuList
+        };
+        const orderRes = await fbDB.collection('orders').add(orderData);
+        const ref = fbDB.collection('orders').doc(orderRes.id);
+        const snapshot = await ref.get();
+        const resData = snapshot.data();
+        resData.id = orderRes.id;
+        return resData;
+    }catch (error){
+        console.log(error);
+        throw error;
+    }
+};
+
+const getOrderListByUserId = async (id) => { //비홀성화
     try{
         const orderRef = fbDB.collection('orders').where('user_id', '==', id).orderBy('created_at', 'desc');
         const ordersnapshot = await orderRef.get();

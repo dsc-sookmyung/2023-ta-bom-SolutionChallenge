@@ -1,4 +1,4 @@
-import schedule from 'node-schedule-tz';
+import schedule from 'node-schedule';
 import { fbDB } from '../config/firebase.js';
 import { Timestamp, FieldValue } from 'firebase-admin/firestore';
 
@@ -47,7 +47,6 @@ const changeState = async (id) =>{
         const nowDay = koreaNow.getDay(); //요일 일월화수목금토
         const nowHour = koreaNow.getHours(); //시
         const nowMinutes = koreaNow.getMinutes(); //분
-
         const dayTime = timeList[(nowDay + 6) % 7]; //가게 특정요일 운영시간
 
         if(dayTime == "휴무"){
@@ -58,11 +57,9 @@ const changeState = async (id) =>{
         const openMinute = Number(dayTime.slice(3, 5));
         const closeHour = Number(dayTime.slice(-5, -3));
         const closeMinute = Number(dayTime.slice(-2));
-
         console.log(id);
         console.log('현재', nowHour, nowMinutes, nowDay);
         console.log(openHour, openMinute, closeHour, closeMinute);
-
 
         if (openHour > nowHour){ 
             changeClosed(id);
@@ -96,14 +93,71 @@ const changeState = async (id) =>{
     }
 };
 
+const makeMonthRevenueDoc = async (id) => {
+    try{
+        const revenueRef = fbDB.collection('restaurants').doc(id).collection('revenues');
+        const now = new Date();
+        const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000); // 현재 시간을 utc로 변환한 밀리세컨드값
+        const koreaTimeDiff = 9 * 60 * 60 * 1000; // 한국 시간은 UTC보다 9시간 빠름
+        const koreaNow = new Date(utcNow + koreaTimeDiff); // utc로 변환된 값을 한국 시간으로 변환시키기 위해 9시간(밀리세컨드)를 더함
+        const nowYear = koreaNow.getFullYear(); //요일 일월화수목금토
+        const nowMonth = ("0" + (1 + koreaNow.getMonth())).slice(-2);
+        const revenueId = nowYear + nowMonth;
+        const data = {total_revenue: 0};
+        const newDoc = await revenueRef.doc(revenueId).set(data);
+    }catch (error){
+        console.log(error);
+        throw error;
+    }
+};
+
+const makeDayRevenueDoc = async (id) => {
+    try{
+        const revenueRef = fbDB.collection('restaurants').doc(id).collection('revenues');
+        const now = new Date();
+        const utcNow = now.getTime() + (now.getTimezoneOffset() * 60 * 1000); // 현재 시간을 utc로 변환한 밀리세컨드값
+        const koreaTimeDiff = 9 * 60 * 60 * 1000; // 한국 시간은 UTC보다 9시간 빠름
+        const koreaNow = new Date(utcNow + koreaTimeDiff); // utc로 변환된 값을 한국 시간으로 변환시키기 위해 9시간(밀리세컨드)를 더함
+        const nowYear = koreaNow.getFullYear(); //요일 일월화수목금토
+        const nowMonth = ("0" + (1 + koreaNow.getMonth())).slice(-2);
+        const nowDay = koreaNow.getDate() + "";
+        const revenueId = nowYear + nowMonth;
+        const update = await revenueRef.doc(revenueId).update({[nowDay]: 0});
+    }catch (error){
+        console.log(error);
+        throw error;
+    }
+};
+
 const makeSchedule = async (id) => {
     try{
         const restrtRef = fbDB.collection('restaurants').doc(id);
         const restrtSnapshot = await restrtRef.get();
         const timeList = restrtSnapshot.data().opening_hours; //월화수목금토일
 
-        //자정마다 order number 초기화
-        const initOrderNumber = schedule.scheduleJob(`00 00 15 * * *`, function () {
+        //매월 초마다 매출 문서 생성하는 스케줄
+        const monthRule = new schedule.RecurrenceRule();
+        monthRule.date = 1;
+        monthRule.hour = 0;
+        monthRule.minute = 0;
+        monthRule.second = 1;
+        monthRule.tz = 'Asia/Seoul';
+        const initMonthRevenue = schedule.scheduleJob(monthRule, function () {
+            makeMonthRevenueDoc(id);
+            console.log(`${id}식당 Month Revenu init`);
+        });
+        //자정마다 매출 문서 생성하는 스케줄
+        const DayRule = new schedule.RecurrenceRule();
+        DayRule.hour = 0;
+        DayRule.minute = 0;
+        DayRule.second = 10;
+        DayRule.tz = 'Asia/Seoul';
+        const initDayRevenue = schedule.scheduleJob(DayRule, function () { //-9시간
+            makeDayRevenueDoc(id);
+            console.log(`${id}식당 Day Revenu init`);
+        });
+        //자정마다 order number 초기화하는 스케줄
+        const initOrderNumber = schedule.scheduleJob(`0 0 15 * * *`, function () {
             changeOrderNumber(id);
             console.log(`${id}식당 order number init`);
         });
@@ -182,6 +236,8 @@ export {
     changeClosed,
     changeState,
     changeOrderNumber,
+    makeDayRevenueDoc,
+    makeMonthRevenueDoc,
     makeSchedule,
     init,
 }

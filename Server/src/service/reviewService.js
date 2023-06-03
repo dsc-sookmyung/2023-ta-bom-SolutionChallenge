@@ -37,6 +37,24 @@ const postReview = async (file, data) => {
     }
 };
 
+const postEmoji = async (id, data) => {
+    try{
+        const emojiData = data.emoji;
+        const reviewRef =  fbDB.collection('reviews').doc(id);
+        const updateEmoji = await reviewRef.update({
+            emoji: emojiData
+        });
+        const reviewDoc = await reviewRef.get();
+        const resData = reviewDoc.data();
+        resData.id = id;
+        console.log(resData);
+        return resData;
+    }catch(error){
+        console.log(error);
+        throw error;
+    }
+};
+
 const getReviewListByRestrtId = async (id) => {
     try{
         const reviewRef = fbDB.collection('reviews');
@@ -168,6 +186,7 @@ const deleteReview = async (id) => {
 
 export default {
     postReview,
+    postEmoji,
     getReviewListByRestrtId,
     getReviewListByRestrtIdWithPage,
     getReviewListByUserId,

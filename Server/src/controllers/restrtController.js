@@ -60,9 +60,10 @@ const postMenu = async (req, res) => {
  */
 const postOption = async (req, res) => {
     const data = req.body;
-    const { id } = req.params;
+    const restrtId = req.params.restrtId;
+    const menuId = req.params.menuId;
     try {
-        const postOption = await restrtService.postOption(id, data);
+        const postOption = await restrtService.postOption(restrtId, menuId, data);
         return res.status(200).json({
             status: 200,
             success: true,
@@ -179,9 +180,10 @@ const getMenuList = async (req, res) => {
 };
 
 const getMenuWithOptions = async (req, res) => {
-    const { id } = req.params;
+    const restrtId = req.params.restrtId;
+    const menuId = req.params.menuId;
     try {
-        const getMenuWithOptions = await restrtService.getMenuWithOptions(id);
+        const getMenuWithOptions = await restrtService.getMenuWithOptions(restrtId, menuId);
         return res.status(200).json({
             status: 200,
             success: true,
@@ -254,9 +256,9 @@ const deleteMenu = async (req, res) => {
  *  @access Private
  */
 const deleteOption = async (req, res) => {
-    const { menuId, optionId} = req.params;
+    const { restrtId, menuId, optionId} = req.params;
     try {
-        const deleteOption = await restrtService.deleteOption(menuId, optionId);
+        const deleteOption = await restrtService.deleteOption(restrtId, menuId, optionId);
         return res.status(200).json({
             status: 200,
             success: true,
@@ -299,6 +301,31 @@ const searchRestrt = async (req, res) => {
     }
 };
 
+/**
+ *  @route GET /restrt/search/:data
+ *  @desc searching restrt data in restrtDB
+ *  @access Private
+ */
+const getRevenue = async (req, res) => {
+    const { id } = req.params;
+    try {
+        const getRevenue = await restrtService.getRevenue(id);
+        return res.status(200).json({
+            status: 200,
+            success: true,
+            message: "식당 매출 읽기 성공",
+            data: getRevenue,
+        });
+    }catch (error){
+        console.log(error);
+        res.status(400).json({
+        status: 400,
+        success: false,
+        message: error.message,
+    });
+    }
+};
+
 export default {
     postRestrt,
     postMenu,
@@ -312,4 +339,5 @@ export default {
     deleteOption,
     searchRestrt,
     getRestrtListWithCategory,
+    getRevenue,
 };
