@@ -169,6 +169,6 @@ Restaurant owner App: [Restaurant owner](https://github.com/dsc-sookmyung/2023-t
 
 <center><img src = "https://user-images.githubusercontent.com/70003845/229250287-011f014e-7ab2-413f-bbe8-196691d941bc.jpg"></center>
 
-[Yun Jae-Eun](https://github.com/yunjaeeun44) : Back-end Developer  
-[Kim Min-Jeong](https://github.com/MIN60) : Front-end Developer  
-[Lee Yu-Jin](https://github.com/Ujaa) : Front-end Developer
+[Yun JaeEun](https://github.com/yunjaeeun44) : Back-end Developer  
+[Kim MinJeong](https://github.com/MIN60) : Front-end Developer  
+[Lee YuJin](https://github.com/Ujaa) : Front-end Developer
