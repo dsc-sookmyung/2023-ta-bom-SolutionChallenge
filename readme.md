@@ -89,7 +89,7 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 
 #### See the history of orders
-  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO'. Whenever the restaurant updates its status, the customer's order status also changes.
+  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Confirming', and 'Good To Go'. Whenever the restaurant updates its status, the customer's order status also changes.
 
 <br/>
 
