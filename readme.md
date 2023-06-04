@@ -153,7 +153,9 @@ The Good To Go app also provides descriptions of the capacities of the reusable 
 
 ## 👍Execution Method
 Here's how you can set up a testing environment.<br/>
-1. Download the apk file [here](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/releases/tag/v1.0.0).  <br/>
+1. Download the apk file here.  <br/>
+Customer App: [Customer](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/releases/tag/v.1.1.0) <br/>
+Restaurant owner App: [Restaurant owner](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/releases/tag/v.1.0.0-Restaurants) <br/>
 2. Run the apk file on your phone or the emulator.<br/>
 3. To ensure the best experience while testing our app, we recommend testing it in a Pixel 6 or higher environment. <br/>
 4. **!!!!important!!!!** Currently, Good To Go's restaurant list consists of restaurants near our team's university, Sookmyung Women's University, so you can try Good To Go by entering `sookmyung women's univ Gwahaggwan` or `GXV8+VH2 Seoul` in the search bar when setting your location.<br/>
