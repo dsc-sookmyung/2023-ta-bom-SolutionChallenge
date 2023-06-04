@@ -52,13 +52,15 @@ Good-To-Go consists of two apps: a consumer app that allows users to place order
 ![onboard](https://user-images.githubusercontent.com/70003845/229249958-1dca634a-7bbd-4ca8-959e-e7f8874dbd31.png)
 
 <br/>
+
 #### Login and see onboarding pages
 
   Our Good To Go app allows users to sign up and log in through Google login and our app uses an onboarding page to introduce first-time users to the app.
 
 <br/>
 
-![map](https://user-images.githubusercontent.com/70003845/229250214-bee55d6c-44ea-4f29-97e3-8a4374611f46.png)
+![image](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/0a9d2c2a-1826-455f-8fc2-9a1915c5c534)
+
 
 #### Set user location
 
@@ -66,7 +68,7 @@ After going through the onboarding page, the user has to enter their location. T
 
 <br/>
 
-![restrt](https://user-images.githubusercontent.com/70003845/229250897-efd668eb-2b75-4b3d-8541-0307b7a4f441.png)
+![restrt](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/5eeec8bd-4c1d-4169-9fe3-0357e83e5161)
 
 #### Ordering the food for packing
 
