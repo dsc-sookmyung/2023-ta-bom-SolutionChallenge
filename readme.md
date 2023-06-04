@@ -33,14 +33,16 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 <br/>
 
 ## 👍Feature
-
-### Feature Overview
+Good-To-Go consists of two apps: a consumer app that allows users to place orders with the restaurant, and a restaurant owner app that allows the restaurant to receive orders.
+### Feature Overview(Customer App)
 1. Google login
 2. Set user location
 3. Show Resturants near by user
 4. Order food for packing
 5. Write review
 6. See the recap
+
+ 
 
 ### Detail Page Images
 
@@ -50,7 +52,7 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 ![onboard](https://user-images.githubusercontent.com/70003845/229249958-1dca634a-7bbd-4ca8-959e-e7f8874dbd31.png)
 
 <br/>
-- Login and see onboarding pages
+#### Login and see onboarding pages
 
   Our Good To Go app allows users to sign up and log in through Google login and our app uses an onboarding page to introduce first-time users to the app.
 
@@ -105,6 +107,14 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
   Users can edit their profile and log out of the app from the Account page.
 
 <br/>
+
+### Feature Overview(Restaurant owner App)
+1. Restaurant information
+2. Managing orders
+3. Accounts
+
+### Detail Page Images
+
 
 ## 👍Execution Method
 Here's how you can set up a testing environment.<br/>
