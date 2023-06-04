@@ -101,8 +101,9 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 <br/>
 
-<img src = "https://user-images.githubusercontent.com/70003845/229255796-57ed6b0c-40ec-4858-9ba2-30bdf22b7277.png" width = "70%">
- 
+
+ ![image](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/c4008fa9-d3a2-4909-ae84-2cbccecebc82)
+
 
 #### See the recap
 
