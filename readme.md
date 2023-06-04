@@ -131,8 +131,17 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 ![info](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/4c2be898-442a-42c5-a661-9d3499e0c06a)
 
 #### Restaurant information
- Restaurant owners can view information about their restaurant and manage reviews on this page. 
+ Restaurant owners can view information about their restaurant and manage reviews on this page. You can add emojis to reviews written by customers.
  Under 'Shop rating', you can see restaurant's average rating and number of reviews, and under 'Sales' you can see how much you earned today and how much you earned this month. You can also compare your sales from month to month via graphs.
+
+<br/>
+
+![orders](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/5bd7ac14-bab0-4ed9-ac51-e88e0ea91241)
+
+#### Managing orders
+ The 'Manage orders' page lets you manage the orders that have come into your restaurant. The page is organized into two tabs: 'New orders' and 'Past orders'. The 'New orders' tab allows you to take action on incoming orders, such as 'Accept order', 'Notify food is ready', and 'Customer has finished packing'. Whenever you change the status of an order, the customer can also see the changing status of the order in the app. The 'Past orders' tab is a collection of orders that you've received in the past.
+
+<br/>
 
 
 
