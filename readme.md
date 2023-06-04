@@ -87,21 +87,25 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 ![orders](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/b0254d41-aac5-41db-b7b5-a7f9cf9cad60)
 
+
+
 #### See the history of orders
-  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO. Users can write reviews for past orders.
+  On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO'. Users can write reviews for past orders.
 
- <br/>
-
+<br/>
 
 ![review](https://user-images.githubusercontent.com/70003845/229252041-04333560-8657-4610-b63e-de73d6a6ae68.png)
 
 #### Write and read reviews
   On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO'. Users can write reviews for past orders.
 
+<br/>
+
+<img src = "https://user-images.githubusercontent.com/70003845/229255796-57ed6b0c-40ec-4858-9ba2-30bdf22b7277.png" width = "70%">
  
 
 #### See the recap
-<img src = "https://user-images.githubusercontent.com/70003845/229255796-57ed6b0c-40ec-4858-9ba2-30bdf22b7277.png" width = "70%">
+
   The Recap page allows users to see their positive environmental impact. Users can see the total number of times they've packaged their food, as well as stats on the reusable containers they've used to pack it.
 
 <br/>
