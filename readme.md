@@ -85,6 +85,8 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 <br/>
 
+![orders](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/b0254d41-aac5-41db-b7b5-a7f9cf9cad60)
+
 #### See the history of orders
   On the Orders page, users can check their current order status and past orders. Order statuses are categorized into three main categories: 'Order', 'Cooking', and 'GOOD TO GO. Users can write reviews for past orders.
 
