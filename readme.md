@@ -143,7 +143,10 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 <br/>
 
+![account](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/bd8b8fe3-c77e-4844-b1f9-765c4e43c19a)
 
+#### Account
+ On the Account page, you can see the Google account you're signed into. It provides the ability to sign out and delete your account.
 
 ## 👍Execution Method
 Here's how you can set up a testing environment.<br/>
