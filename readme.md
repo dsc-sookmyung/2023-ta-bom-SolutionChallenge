@@ -118,12 +118,22 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 <br/>
 
+---
+
 ### Feature Overview(Restaurant owner App)
 1. Restaurant information
 2. Managing orders
 3. Accounts
 
 ### Detail Page Images
+<br/>
+
+![info](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/4c2be898-442a-42c5-a661-9d3499e0c06a)
+
+#### Restaurant information
+ Restaurant owners can view information about their restaurant and manage reviews on this page. 
+ Under 'Shop rating', you can see restaurant's average rating and number of reviews, and under 'Sales' you can see how much you earned today and how much you earned this month. You can also compare your sales from month to month via graphs.
+
 
 
 ## 👍Execution Method
