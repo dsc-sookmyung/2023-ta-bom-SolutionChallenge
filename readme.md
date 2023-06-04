@@ -131,22 +131,22 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 ![info](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/4c2be898-442a-42c5-a661-9d3499e0c06a)
 
 #### Restaurant information
- Restaurant owners can view information about their restaurant and manage reviews on this page. You can add emojis to reviews written by customers.
- Under 'Shop rating', you can see restaurant's average rating and number of reviews, and under 'Sales' you can see how much you earned today and how much you earned this month. You can also compare your sales from month to month via graphs.
+ Users(Restaurant owners) can view information about their restaurant and manage reviews on this page. Users can add emojis to reviews written by customers.
+ Under 'Shop rating', users can see restaurant's average rating and number of reviews, and under 'Sales' users can see how much they earned today and how much they earned this month. Users can also compare their sales from month to month via graphs.
 
 <br/>
 
 ![orders](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/5bd7ac14-bab0-4ed9-ac51-e88e0ea91241)
 
 #### Managing orders
- The 'Manage orders' page lets you manage the orders that have come into your restaurant. The page is organized into two tabs: 'New orders' and 'Past orders'. The 'New orders' tab allows you to take action on incoming orders, such as 'Accept order', 'Notify food is ready', and 'Customer has finished packing'. Whenever you change the status of an order, the customer can also see the changing status of the order in the app. The 'Past orders' tab is a collection of orders that you've received in the past.
+ The 'Manage orders' page lets users manage the orders that have come into their restaurant. The page is organized into two tabs: 'New orders' and 'Past orders'. The 'New orders' tab allows users to take action on incoming orders, such as 'Accept order', 'Notify food is ready', and 'Customer has finished packing'. Whenever you change the status of an order, the customer can also see the changing status of the order in the app. The 'Past orders' tab is a collection of orders that they've received in the past.
 
 <br/>
 
 ![account](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/bd8b8fe3-c77e-4844-b1f9-765c4e43c19a)
 
 #### Account
- On the Account page, you can see the Google account you're signed into. It provides the ability to sign out and delete your account.
+ On the Account page, users can see the Google account they're signed into. It provides the ability to sign out and delete their account.
 
 ## 👍Execution Method
 Here's how you can set up a testing environment.<br/>
