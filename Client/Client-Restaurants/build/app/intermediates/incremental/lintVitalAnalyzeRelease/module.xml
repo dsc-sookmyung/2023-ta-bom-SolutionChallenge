@@ -1,0 +1,18 @@
+<lint-module
+    format="1"
+    dir="/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app"
+    name=":app"
+    type="APP"
+    maven="android:app:"
+    gradle="7.2.0"
+    buildFolder="/Users/yujin/Documents/GitHub/good_to_go_restaurant/build/app"
+    bootClassPath="/Users/yujin/Library/Android/sdk/platforms/android-33/android.jar:/Users/yujin/Library/Android/sdk/build-tools/30.0.3/core-lambda-stubs.jar"
+    javaSourceLevel="1.8"
+    compileTarget="android-33">
+  <lintOptions
+      abortOnError="true"
+      absolutePaths="true"
+      checkReleaseBuilds="true"
+      explainIssues="true"/>
+  <variant name="release"/>
+</lint-module>

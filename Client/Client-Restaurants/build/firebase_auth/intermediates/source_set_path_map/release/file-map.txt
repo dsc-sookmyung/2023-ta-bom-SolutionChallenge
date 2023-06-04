@@ -1,0 +1,17 @@
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-play-services-base-17.1.0-0 /Users/yujin/.gradle/caches/transforms-3/04888688f0b7243035ab8e1a84f2c1d3/transformed/jetified-play-services-base-17.1.0/res
+io.flutter.plugins.firebase.auth.firebase_auth-browser-1.4.0-1 /Users/yujin/.gradle/caches/transforms-3/162e57b214e200a6207c40330426bda2/transformed/browser-1.4.0/res
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-annotation-experimental-1.1.0-2 /Users/yujin/.gradle/caches/transforms-3/3795200b4ef80330da39fee63b1e3f99/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-window-java-1.0.0-beta04-3 /Users/yujin/.gradle/caches/transforms-3/4f8a10da11d41b9ccabff01515190014/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-firebase-common-20.3.2-4 /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/res
+io.flutter.plugins.firebase.auth.firebase_auth-core-1.6.0-5 /Users/yujin/.gradle/caches/transforms-3/ae42e6c01585f28a5adeac7499fca147/transformed/core-1.6.0/res
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-play-services-basement-18.1.0-6 /Users/yujin/.gradle/caches/transforms-3/b98038a8bb5f558b05cc7fc73ca7ad87/transformed/jetified-play-services-basement-18.1.0/res
+io.flutter.plugins.firebase.auth.firebase_auth-jetified-window-1.0.0-beta04-7 /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.firebase.auth.firebase_auth-main-8 /Users/yujin/.pub-cache/hosted/pub.dev/firebase_auth-4.6.0/android/src/main/res
+io.flutter.plugins.firebase.auth.firebase_auth-release-9 /Users/yujin/.pub-cache/hosted/pub.dev/firebase_auth-4.6.0/android/src/release/res
+io.flutter.plugins.firebase.auth.firebase_auth-pngs-10 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/generated/res/pngs/release
+io.flutter.plugins.firebase.auth.firebase_auth-resValues-11 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/generated/res/resValues/release
+io.flutter.plugins.firebase.auth.firebase_auth-rs-12 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/generated/res/rs/release
+io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-13 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.firebase.auth.firebase_auth-mergeReleaseResources-14 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.firebase.auth.firebase_auth-merged_res-15 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_res/release
+io.flutter.plugins.firebase.auth.firebase_auth-packaged_res-16 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/packaged_res/release

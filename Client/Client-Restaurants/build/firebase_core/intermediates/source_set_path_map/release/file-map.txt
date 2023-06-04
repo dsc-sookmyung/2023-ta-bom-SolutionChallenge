@@ -1,0 +1,14 @@
+io.flutter.plugins.firebase.core.firebase_core-jetified-annotation-experimental-1.1.0-0 /Users/yujin/.gradle/caches/transforms-3/3795200b4ef80330da39fee63b1e3f99/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-window-java-1.0.0-beta04-1 /Users/yujin/.gradle/caches/transforms-3/4f8a10da11d41b9ccabff01515190014/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-firebase-common-20.3.2-2 /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/res
+io.flutter.plugins.firebase.core.firebase_core-core-1.6.0-3 /Users/yujin/.gradle/caches/transforms-3/ae42e6c01585f28a5adeac7499fca147/transformed/core-1.6.0/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-play-services-basement-18.1.0-4 /Users/yujin/.gradle/caches/transforms-3/b98038a8bb5f558b05cc7fc73ca7ad87/transformed/jetified-play-services-basement-18.1.0/res
+io.flutter.plugins.firebase.core.firebase_core-jetified-window-1.0.0-beta04-5 /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.firebase.core.firebase_core-main-6 /Users/yujin/.pub-cache/hosted/pub.dev/firebase_core-2.12.0/android/src/main/res
+io.flutter.plugins.firebase.core.firebase_core-release-7 /Users/yujin/.pub-cache/hosted/pub.dev/firebase_core-2.12.0/android/src/release/res
+io.flutter.plugins.firebase.core.firebase_core-pngs-8 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/generated/res/pngs/release
+io.flutter.plugins.firebase.core.firebase_core-resValues-9 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/generated/res/resValues/release
+io.flutter.plugins.firebase.core.firebase_core-rs-10 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/generated/res/rs/release
+io.flutter.plugins.firebase.core.firebase_core-mergeReleaseResources-11 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.firebase.core.firebase_core-mergeReleaseResources-12 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.firebase.core.firebase_core-merged_res-13 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/merged_res/release

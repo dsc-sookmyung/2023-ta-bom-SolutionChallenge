@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "io.flutter.plugins.imagepicker.image_picker_android-merged_res-18:/layout-v16/notification_template_custom_big.xml",
+        "source": "io.flutter.plugins.imagepicker.image_picker_android-core-1.9.0-5:/layout-v16/notification_template_custom_big.xml"
+    }
+]

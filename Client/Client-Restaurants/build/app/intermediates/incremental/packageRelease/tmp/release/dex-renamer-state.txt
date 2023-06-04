@@ -1,0 +1,4 @@
+#Thu Jun 01 14:57:15 KST 2023
+base.0=/Users/yujin/Documents/GitHub/good_to_go_restaurant/build/app/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+renamed.0=classes.dex
+path.0=classes.dex

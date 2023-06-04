@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "io.flutter.plugins.imagepicker.image_picker_android-merged_res-18:/drawable-v21/notification_action_background.xml",
+        "source": "io.flutter.plugins.imagepicker.image_picker_android-core-1.9.0-5:/drawable-v21/notification_action_background.xml"
+    }
+]

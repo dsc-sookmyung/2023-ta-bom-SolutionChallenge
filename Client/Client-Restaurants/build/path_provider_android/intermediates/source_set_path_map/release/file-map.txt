@@ -1,0 +1,12 @@
+io.flutter.plugins.pathprovider.path_provider_android-jetified-annotation-experimental-1.1.0-0 /Users/yujin/.gradle/caches/transforms-3/3795200b4ef80330da39fee63b1e3f99/transformed/jetified-annotation-experimental-1.1.0/res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-java-1.0.0-beta04-1 /Users/yujin/.gradle/caches/transforms-3/4f8a10da11d41b9ccabff01515190014/transformed/jetified-window-java-1.0.0-beta04/res
+io.flutter.plugins.pathprovider.path_provider_android-core-1.6.0-2 /Users/yujin/.gradle/caches/transforms-3/ae42e6c01585f28a5adeac7499fca147/transformed/core-1.6.0/res
+io.flutter.plugins.pathprovider.path_provider_android-jetified-window-1.0.0-beta04-3 /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/res
+io.flutter.plugins.pathprovider.path_provider_android-main-4 /Users/yujin/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27/android/src/main/res
+io.flutter.plugins.pathprovider.path_provider_android-release-5 /Users/yujin/.pub-cache/hosted/pub.dev/path_provider_android-2.0.27/android/src/release/res
+io.flutter.plugins.pathprovider.path_provider_android-pngs-6 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/generated/res/pngs/release
+io.flutter.plugins.pathprovider.path_provider_android-resValues-7 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/generated/res/resValues/release
+io.flutter.plugins.pathprovider.path_provider_android-rs-8 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/generated/res/rs/release
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-9 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/intermediates/incremental/release/mergeReleaseResources/merged.dir
+io.flutter.plugins.pathprovider.path_provider_android-mergeReleaseResources-10 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/intermediates/incremental/release/mergeReleaseResources/stripped.dir
+io.flutter.plugins.pathprovider.path_provider_android-merged_res-11 /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/path_provider_android/intermediates/merged_res/release

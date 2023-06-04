@@ -1,0 +1,288 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.good_to_go_restaurant"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="33" />
+9-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->[:google_sign_in_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/google_sign_in_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:5-67
+11-->[:google_sign_in_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/google_sign_in_android/intermediates/merged_manifest/release/AndroidManifest.xml:9:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:5-79
+12-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:26:22-76
+13
+14    <permission
+14-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+15        android:name="com.example.good_to_go_restaurant.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+15-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+16        android:protectionLevel="signature" />
+16-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+17
+18    <uses-permission android:name="com.example.good_to_go_restaurant.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+18-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+18-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+19
+20    <application
+21        android:name="android.app.Application"
+21-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:5:9-42
+22        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+22-->[androidx.core:core:1.9.0] /Users/yujin/.gradle/caches/transforms-3/85b7bdf0a11e2121e5a233436dc527ac/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+23        android:icon="@mipmap/ic_launcher"
+23-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:6:9-43
+24        android:label="good_to_go_restaurant" >
+24-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:4:9-46
+25        <activity
+25-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:7:9-27:20
+26            android:name="com.example.good_to_go_restaurant.MainActivity"
+26-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:8:13-41
+27            android:configChanges="orientation|keyboardHidden|keyboard|screenSize|smallestScreenSize|locale|layoutDirection|fontScale|screenLayout|density|uiMode"
+27-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:12:13-163
+28            android:exported="true"
+28-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:9:13-36
+29            android:hardwareAccelerated="true"
+29-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:13:13-47
+30            android:launchMode="singleTop"
+30-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:10:13-43
+31            android:theme="@style/LaunchTheme"
+31-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:11:13-47
+32            android:windowSoftInputMode="adjustResize" >
+32-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:14:13-55
+33
+34            <!--
+35                 Specifies an Android theme to apply to this Activity as soon as
+36                 the Android process has started. This theme is visible to the user
+37                 while the Flutter UI initializes. After that, this theme continues
+38                 to determine the Window background behind the Flutter UI.
+39            -->
+40            <meta-data
+40-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:19:13-22:17
+41                android:name="io.flutter.embedding.android.NormalTheme"
+41-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:20:15-70
+42                android:resource="@style/NormalTheme" />
+42-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:21:15-52
+43
+44            <intent-filter>
+44-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:23:13-26:29
+45                <action android:name="android.intent.action.MAIN" />
+45-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:24:17-68
+45-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:24:25-66
+46
+47                <category android:name="android.intent.category.LAUNCHER" />
+47-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:25:17-76
+47-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:25:27-74
+48            </intent-filter>
+49        </activity>
+50        <!--
+51             Don't delete the meta-data below.
+52             This is used by the Flutter tool to generate GeneratedPluginRegistrant.java
+53        -->
+54        <meta-data
+54-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:30:9-32:33
+55            android:name="flutterEmbedding"
+55-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:31:13-44
+56            android:value="2" />
+56-->/Users/yujin/Documents/GitHub/good_to_go_restaurant/android/app/src/main/AndroidManifest.xml:32:13-30
+57
+58        <service
+58-->[:firebase_auth] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-14:19
+59            android:name="com.google.firebase.components.ComponentDiscoveryService"
+59-->[:firebase_auth] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:10:18-89
+60            android:directBootAware="true"
+60-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:34:13-43
+61            android:exported="false" >
+61-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:68:13-37
+62            <meta-data
+62-->[:firebase_auth] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+63                android:name="com.google.firebase.components:io.flutter.plugins.firebase.auth.FlutterFirebaseAuthRegistrar"
+63-->[:firebase_auth] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
+64                android:value="com.google.firebase.components.ComponentRegistrar" />
+64-->[:firebase_auth] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_auth/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+65            <meta-data
+65-->[:cloud_firestore] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/cloud_firestore/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+66                android:name="com.google.firebase.components:io.flutter.plugins.firebase.firestore.FlutterFirebaseFirestoreRegistrar"
+66-->[:cloud_firestore] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/cloud_firestore/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-134
+67                android:value="com.google.firebase.components.ComponentRegistrar" />
+67-->[:cloud_firestore] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/cloud_firestore/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+68            <meta-data
+68-->[:firebase_core] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-13:85
+69                android:name="com.google.firebase.components:io.flutter.plugins.firebase.core.FlutterFirebaseCoreRegistrar"
+69-->[:firebase_core] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:12:17-124
+70                android:value="com.google.firebase.components.ComponentRegistrar" />
+70-->[:firebase_core] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/firebase_core/intermediates/merged_manifest/release/AndroidManifest.xml:13:17-82
+71            <meta-data
+71-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:69:13-71:85
+72                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+72-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:70:17-109
+73                android:value="com.google.firebase.components.ComponentRegistrar" />
+73-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:71:17-82
+74            <meta-data
+74-->[com.google.firebase:firebase-firestore:24.5.0] /Users/yujin/.gradle/caches/transforms-3/79de29499a778905000c8fd3bcf80a9a/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:19:13-21:85
+75                android:name="com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar"
+75-->[com.google.firebase:firebase-firestore:24.5.0] /Users/yujin/.gradle/caches/transforms-3/79de29499a778905000c8fd3bcf80a9a/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:20:17-111
+76                android:value="com.google.firebase.components.ComponentRegistrar" />
+76-->[com.google.firebase:firebase-firestore:24.5.0] /Users/yujin/.gradle/caches/transforms-3/79de29499a778905000c8fd3bcf80a9a/transformed/jetified-firebase-firestore-24.5.0/AndroidManifest.xml:21:17-82
+77        </service>
+78
+79        <provider
+79-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:10:9-18:20
+80            android:name="io.flutter.plugins.imagepicker.ImagePickerFileProvider"
+80-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:11:13-82
+81            android:authorities="com.example.good_to_go_restaurant.flutter.image_provider"
+81-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:12:13-74
+82            android:exported="false"
+82-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:13:13-37
+83            android:grantUriPermissions="true" >
+83-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:14:13-47
+84            <meta-data
+84-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:15:13-17:75
+85                android:name="android.support.FILE_PROVIDER_PATHS"
+85-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:16:17-67
+86                android:resource="@xml/flutter_image_picker_file_paths" />
+86-->[:image_picker_android] /Users/yujin/Documents/GitHub/good_to_go_restaurant/build/image_picker_android/intermediates/merged_manifest/release/AndroidManifest.xml:17:17-72
+87        </provider>
+88
+89        <activity
+89-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:23:9-27:75
+90            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+90-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:24:13-93
+91            android:excludeFromRecents="true"
+91-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:25:13-46
+92            android:exported="false"
+92-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:26:13-37
+93            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+93-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:27:13-72
+94        <!--
+95            Service handling Google Sign-In user revocation. For apps that do not integrate with
+96            Google Sign-In, this service will never be started.
+97        -->
+98        <service
+98-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:33:9-37:51
+99            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+99-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:34:13-89
+100            android:exported="true"
+100-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:35:13-36
+101            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+101-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:36:13-107
+102            android:visibleToInstantApps="true" />
+102-->[com.google.android.gms:play-services-auth:20.5.0] /Users/yujin/.gradle/caches/transforms-3/1b2f5fc56a6e9fbba1b2a31d846cd3d2/transformed/jetified-play-services-auth-20.5.0/AndroidManifest.xml:37:13-48
+103
+104        <activity
+104-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:29:9-46:20
+105            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+105-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:30:13-80
+106            android:excludeFromRecents="true"
+106-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:31:13-46
+107            android:exported="true"
+107-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:32:13-36
+108            android:launchMode="singleTask"
+108-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:33:13-44
+109            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+109-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:34:13-72
+110            <intent-filter>
+110-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:35:13-45:29
+111                <action android:name="android.intent.action.VIEW" />
+111-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
+111-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
+112
+113                <category android:name="android.intent.category.DEFAULT" />
+113-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
+113-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
+114                <category android:name="android.intent.category.BROWSABLE" />
+114-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
+114-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
+115
+116                <data
+116-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
+117                    android:host="firebase.auth"
+117-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
+118                    android:path="/"
+118-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
+119                    android:scheme="genericidp" />
+119-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
+120            </intent-filter>
+121        </activity>
+122        <activity
+122-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:47:9-64:20
+123            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+123-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:48:13-79
+124            android:excludeFromRecents="true"
+124-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:49:13-46
+125            android:exported="true"
+125-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:50:13-36
+126            android:launchMode="singleTask"
+126-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:51:13-44
+127            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+127-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:52:13-72
+128            <intent-filter>
+128-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:53:13-63:29
+129                <action android:name="android.intent.action.VIEW" />
+129-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:17-69
+129-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:36:25-66
+130
+131                <category android:name="android.intent.category.DEFAULT" />
+131-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:17-76
+131-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:38:27-73
+132                <category android:name="android.intent.category.BROWSABLE" />
+132-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:17-78
+132-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:39:27-75
+133
+134                <data
+134-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:41:17-44:51
+135                    android:host="firebase.auth"
+135-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:42:21-49
+136                    android:path="/"
+136-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:43:21-37
+137                    android:scheme="recaptcha" />
+137-->[com.google.firebase:firebase-auth:21.3.0] /Users/yujin/.gradle/caches/transforms-3/d6bac26d288ac0b6ab8036f5aeabea4b/transformed/jetified-firebase-auth-21.3.0/AndroidManifest.xml:44:21-48
+138            </intent-filter>
+139        </activity>
+140        <activity
+140-->[com.google.android.gms:play-services-base:18.0.1] /Users/yujin/.gradle/caches/transforms-3/c7232b6ce4e188bed1222fb6e790465b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:9-22:45
+141            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+141-->[com.google.android.gms:play-services-base:18.0.1] /Users/yujin/.gradle/caches/transforms-3/c7232b6ce4e188bed1222fb6e790465b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:20:19-85
+142            android:exported="false"
+142-->[com.google.android.gms:play-services-base:18.0.1] /Users/yujin/.gradle/caches/transforms-3/c7232b6ce4e188bed1222fb6e790465b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:22:19-43
+143            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+143-->[com.google.android.gms:play-services-base:18.0.1] /Users/yujin/.gradle/caches/transforms-3/c7232b6ce4e188bed1222fb6e790465b/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:21:19-78
+144
+145        <provider
+145-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:25:9-30:39
+146            android:name="com.google.firebase.provider.FirebaseInitProvider"
+146-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:26:13-77
+147            android:authorities="com.example.good_to_go_restaurant.firebaseinitprovider"
+147-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:27:13-72
+148            android:directBootAware="true"
+148-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:28:13-43
+149            android:exported="false"
+149-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:29:13-37
+150            android:initOrder="100" />
+150-->[com.google.firebase:firebase-common:20.3.2] /Users/yujin/.gradle/caches/transforms-3/7c67cb1107658111bdfb744d9b4eec58/transformed/jetified-firebase-common-20.3.2/AndroidManifest.xml:30:13-36
+151
+152        <meta-data
+152-->[com.google.android.gms:play-services-basement:18.2.0] /Users/yujin/.gradle/caches/transforms-3/30cb6f6210c6f10769db0ca1144fe992/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+153            android:name="com.google.android.gms.version"
+153-->[com.google.android.gms:play-services-basement:18.2.0] /Users/yujin/.gradle/caches/transforms-3/30cb6f6210c6f10769db0ca1144fe992/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+154            android:value="@integer/google_play_services_version" />
+154-->[com.google.android.gms:play-services-basement:18.2.0] /Users/yujin/.gradle/caches/transforms-3/30cb6f6210c6f10769db0ca1144fe992/transformed/jetified-play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+155
+156        <uses-library
+156-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
+157            android:name="androidx.window.extensions"
+157-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:26:13-54
+158            android:required="false" />
+158-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:27:13-37
+159        <uses-library
+159-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:28:9-30:40
+160            android:name="androidx.window.sidecar"
+160-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:29:13-51
+161            android:required="false" />
+161-->[androidx.window:window:1.0.0-beta04] /Users/yujin/.gradle/caches/transforms-3/fa8aad42c825af1f34f93ab9a34c8ecb/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:30:13-37
+162    </application>
+163
+164</manifest>
