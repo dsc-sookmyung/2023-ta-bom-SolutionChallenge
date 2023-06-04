@@ -5,9 +5,9 @@
 
 ## 👍Introduction
 
-The explosive growth of the food delivery and packaging culture around the world has led to a surge in the use of single-use plastics. While many people have recognized this problem and are trying to practice multi-container packaging to reduce the use of single-use plastics, there are a number of challenges to making this a consistent practice.  
-First, you'll need to contact each restaurant directly or find their location information to see if they are a multi-use container restaurant. Even if you find a restaurant that does, it's difficult to determine what size and capacity of to-go containers you need for each item on the menu. Because of these problems, some people end up giving up on trying to pack their food. So, our ‘ta-bom’ team has developed the ‘Good-To-Go’ app to solve these problems and make zero-waste food packaging easy and convenient for everyone.  
-Good-To-Go makes it easy for users to find restaurants that offer zero-waste packaging and provides information on the number of multi-serving containers needed for each menu item, eliminating the need for users to contact restaurants individually to determine container size and capacity. The app also includes reviews from other users, providing valuable insights to help users make informed packaging decisions. With ‘Good-To-Go’, users can easily order food from restaurants that offer zero-waste packaging, reducing their carbon footprint and contributing to a more sustainable planet.
+The explosive growth of the food delivery and packaging culture around the world has led to a surge in the use of single-use plastics. While many people have recognized this problem and are trying to practice reusable container packaging to reduce the use of single-use plastics, there are a number of challenges to making this a consistent practice.  
+First, you'll need to contact each restaurant directly or find their location information to see if they are a reusable container restaurant. Even if you find a restaurant that does, it's difficult to determine what size and capacity of reusable containers you need for each item on the menu. Because of these problems, some people end up giving up on trying to pack their food. So, our ‘ta-bom’ team has developed the ‘Good-To-Go’ app to solve these problems and make zero-waste food packaging easy and convenient for everyone.  
+Good-To-Go makes it easy for users to find restaurants that offer zero-waste packaging and provides information on the number of reusable containers needed for each menu item, eliminating the need for users to contact restaurants individually to determine container size and capacity. The app also includes reviews from other users, providing valuable insights to help users make informed packaging decisions. With ‘Good-To-Go’, users can easily order food from restaurants that offer zero-waste packaging, reducing their carbon footprint and contributing to a more sustainable planet.
 
 <br/>
 
@@ -34,7 +34,7 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 
 ## 👍Feature
 Good-To-Go consists of two apps: a consumer app that allows users to place orders with the restaurant, and a restaurant owner app that allows the restaurant to receive orders.
-### Feature Overview(Customer App)
+### Customer App Feature Overview
 1. Google login
 2. Set user location
 3. Show Resturants near by user
@@ -72,7 +72,7 @@ After going through the onboarding page, the user has to enter their location. T
 
 #### Order food for packing
 
-A restaurant's detail page gives users information and reviews about the restaurant. When a user clicks on the food that they want to order, they'll see the size and number of to-go containers that they need to package the food.
+A restaurant's detail page gives users information and reviews about the restaurant. When a user clicks on the food that they want to order, they'll see the size and number of reusable containers that they need to package the food.
 
 <br/>
 
@@ -81,7 +81,7 @@ A restaurant's detail page gives users information and reviews about the restaur
 
 #### Read the description of reusable containers
 
-The Good To Go app also provides descriptions of the capacities of the to-go containers you should bring. Tap the button at the top to see a description and capacity for each multi-serving container. Once you've packed and ordered, you can view your order history.
+The Good To Go app also provides descriptions of the capacities of the reusable containers you should bring. Tap the button at the top to see a description and capacity for each reusable container. Once you've packed and ordered, you can view your order history.
 
 <br/>
 
@@ -120,7 +120,7 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 
 ---
 
-### Feature Overview(Restaurant owner App)
+### Restaurant owner App Feature Overview
 1. Restaurant information
 2. Managing orders
 3. Accounts
