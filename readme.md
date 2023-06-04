@@ -70,7 +70,7 @@ After going through the onboarding page, the user has to enter their location. T
 ![restrt](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/5eeec8bd-4c1d-4169-9fe3-0357e83e5161)
 
 
-#### Ordering the food for packing
+#### Order food for packing
 
 A restaurant's detail page gives users information and reviews about the restaurant. When a user clicks on the food that they want to order, they'll see the size and number of to-go containers that they need to package the food.
 
@@ -140,7 +140,7 @@ The Good To Go app also provides descriptions of the capacities of the to-go con
 ![orders](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/5bd7ac14-bab0-4ed9-ac51-e88e0ea91241)
 
 
-#### Managing orders
+#### Manage orders
  The 'Manage orders' page lets users manage the orders that have come into their restaurant. The page is organized into two tabs: 'New orders' and 'Past orders'. The 'New orders' tab allows users to take action on incoming orders, such as 'Accept order', 'Notify food is ready', and 'Customer has finished packing'. Whenever you change the status of an order, the customer can also see the changing status of the order in the app. The 'Past orders' tab is a collection of orders that they've received in the past.
 
 <br/>
