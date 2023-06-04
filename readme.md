@@ -76,11 +76,12 @@ A restaurant's detail page gives users information and reviews about the restaur
 
 <br/>
 
-![container](https://user-images.githubusercontent.com/70003845/229251635-e2c26436-cf33-463b-b78f-6743c208e42c.png)
+![container](https://github.com/dsc-sookmyung/2023-ta-bom-SolutionChallenge/assets/49427080/6f5aaafc-bb7e-49c0-9013-2f8f70e8aa61)
+
 
 #### Read the description of reusable containers
 
-The Good To Go app also provides descriptions of the capacities of the to-go containers you should bring. Tap the "?" button at the top to see a description and capacity for each multi-serving container. Once you've packed and ordered, you can view your order history.
+The Good To Go app also provides descriptions of the capacities of the to-go containers you should bring. Tap the button at the top to see a description and capacity for each multi-serving container. Once you've packed and ordered, you can view your order history.
 
 <br/>
 
