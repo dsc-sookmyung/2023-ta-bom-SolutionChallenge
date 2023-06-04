@@ -28,7 +28,7 @@ Our ta-bom team chose two UN Sustainable Development Goals: SDG 12: **Responsibl
 
 ## 👍Demo Video
 
-[![Video Label](https://user-images.githubusercontent.com/40076944/229560114-3908ec44-2a37-442e-bc05-60e214186122.png)](https://youtu.be/rREzuxvsreg)
+[![Video Label](https://user-images.githubusercontent.com/40076944/229560114-3908ec44-2a37-442e-bc05-60e214186122.png)](https://youtu.be/XS23AtjpEc4)
 
 <br/>
 
